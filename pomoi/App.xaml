@@ -1,0 +1,118 @@
+﻿<Application x:Class="pomoi.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Стиль для кнопок -->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#007BFF"/>
+            <!-- Синий фон -->
+            <Setter Property="Foreground" Value="White"/>
+            <!-- Белый текст -->
+            <Setter Property="FontWeight" Value="Bold"/>
+            <!-- Жирный шрифт -->
+            <Setter Property="Padding" Value="10,5"/>
+            <!-- Внутренние отступы -->
+            <Setter Property="BorderThickness" Value="0"/>
+            <!-- Без границы -->
+            <Setter Property="Margin" Value="5"/>
+            <!-- Отступы между кнопками -->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="5">
+                            <!-- Закругленные углы -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <!-- Изменение цвета при наведении -->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#0056b3"/>
+                    <!-- Темно-синий -->
+                </Trigger>
+                <!-- Изменение цвета при нажатии -->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="#004085"/>
+                    <!-- Очень темно-синий -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Стиль для DataGrid -->
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <!-- Белый фон -->
+            <Setter Property="Foreground" Value="#343A40"/>
+            <!-- Темно-серый текст -->
+            <Setter Property="BorderBrush" Value="#CED4DA"/>
+            <!-- Серая рамка -->
+            <Setter Property="BorderThickness" Value="1"/>
+            <!-- Толщина рамки -->
+            <Setter Property="RowBackground" Value="#FFFFFF"/>
+            <!-- Фон строк -->
+            <Setter Property="AlternatingRowBackground" Value="#F8F9FA"/>
+            <!-- Альтернативный фон строк -->
+            <Setter Property="FontSize" Value="14"/>
+            <!-- Размер шрифта -->
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <!-- Запрет добавления строк -->
+        </Style>
+
+        <!-- Стиль для TextBox -->
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <!-- Белый фон -->
+            <Setter Property="Foreground" Value="#343A40"/>
+            <!-- Темно-серый текст -->
+            <Setter Property="BorderBrush" Value="#CED4DA"/>
+            <!-- Серая рамка -->
+            <Setter Property="BorderThickness" Value="1"/>
+            <!-- Толщина рамки -->
+            <Setter Property="Padding" Value="5"/>
+            <!-- Внутренние отступы -->
+            <Setter Property="Margin" Value="5"/>
+            <!-- Отступы вокруг -->
+            <Setter Property="FontSize" Value="14"/>
+            <!-- Размер шрифта -->
+            <Style.Triggers>
+                <!-- Изменение рамки при фокусе -->
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="BorderBrush" Value="#007BFF"/>
+                    <!-- Синяя рамка -->
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Стиль для DatePicker -->
+        <Style TargetType="DatePicker">
+            <Setter Property="Background" Value="#FFFFFF"/>
+            <!-- Белый фон -->
+            <Setter Property="Foreground" Value="#343A40"/>
+            <!-- Темно-серый текст -->
+            <Setter Property="BorderBrush" Value="#CED4DA"/>
+            <!-- Серая рамка -->
+            <Setter Property="BorderThickness" Value="1"/>
+            <!-- Толщина рамки -->
+            <Setter Property="Padding" Value="5"/>
+            <!-- Внутренние отступы -->
+            <Setter Property="Margin" Value="5"/>
+            <!-- Отступы вокруг -->
+            <Setter Property="FontSize" Value="14"/>
+            <!-- Размер шрифта -->
+        </Style>
+
+        <!-- Стиль для TextBlock -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#343A40"/>
+            <!-- Темно-серый текст -->
+            <Setter Property="FontSize" Value="14"/>
+            <!-- Размер шрифта -->
+            <Setter Property="Margin" Value="5"/>
+            <!-- Отступы -->
+        </Style>
+    </Application.Resources>
+</Application>

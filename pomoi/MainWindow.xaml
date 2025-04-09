@@ -1,0 +1,35 @@
+﻿<Window x:Class="pomoi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Клиенты" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Таблица клиентов -->
+        <DataGrid Grid.Row="0" 
+                  ItemsSource="{Binding Clients}" 
+                  SelectedItem="{Binding SelectedClient, Mode=TwoWay}"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ClientId}" Width="50"/>
+                <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}" Width="150"/>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}" Width="150"/>
+                <DataGridTextColumn Header="Телефон" Binding="{Binding Phone}" Width="150"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="200"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding BirthDate, StringFormat=\{0:dd.MM.yyyy\}}" Width="120"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Панель кнопок -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Обновить" Command="{Binding RefreshCommand}" Margin="5" Padding="10,5" Width="100"/>
+            <Button Content="Добавить" Command="{Binding AddClientCommand}" Margin="5" Padding="10,5" Width="100"/>
+            <Button Content="Редактировать" Command="{Binding EditClientCommand}" CommandParameter="{Binding SelectedClient}" Margin="5" Padding="10,5" Width="100"/>
+            <Button Content="Удалить" Command="{Binding DeleteClientCommand}" CommandParameter="{Binding SelectedClient}" Margin="5" Padding="10,5" Width="100"/>
+        </StackPanel>
+        <Button Content="Визит" Command="{Binding OpenVisitsWindowCommand}" Padding="10,5" Margin="690,10,10,10" Width="100" Grid.Row="1"/>
+    </Grid>
+</Window>

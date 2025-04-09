@@ -1,0 +1,27 @@
+﻿<Window x:Class="pomoi.Views.AddEditVisitWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Добавить/Редактировать посещение" Height="300" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Клиент -->
+        <TextBlock Text="Клиент:" Grid.Row="0" Margin="5"/>
+        <ComboBox x:Name="ClientComboBox" Grid.Row="0" Margin="5" Grid.Column="1"/>
+
+        <!-- Дата посещения -->
+        <TextBlock Text="Дата посещения:" Grid.Row="1" Margin="5"/>
+        <DatePicker x:Name="VisitDatePicker" Grid.Row="1" Margin="5" Grid.Column="1"/>
+
+        <!-- Кнопки -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Сохранить" Click="SaveButton_Click" Margin="5"/>
+            <Button Content="Отмена" Click="CancelButton_Click" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>
