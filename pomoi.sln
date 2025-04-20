@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pomoi", "pomoi\pomoi.csproj", "{BD9E2217-5825-42A9-BC96-C922539ACEA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pomoi", "pomoi\pomoi.csproj", "{BD9E2217-5825-42A9-BC96-C922539ACEA2}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SalonKros", "SalonKros\SalonKros.vdproj", "{5C3D8E46-3E3E-4ED1-B318-7E1718B45805}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,8 @@ Global
 		{BD9E2217-5825-42A9-BC96-C922539ACEA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD9E2217-5825-42A9-BC96-C922539ACEA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD9E2217-5825-42A9-BC96-C922539ACEA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3D8E46-3E3E-4ED1-B318-7E1718B45805}.Debug|Any CPU.ActiveCfg = Debug
+		{5C3D8E46-3E3E-4ED1-B318-7E1718B45805}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
